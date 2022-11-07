@@ -1,6 +1,6 @@
 package legacy;
 
-import Cards.Actors.Card;
+import model.Cards.Actors.Card;
 
 import java.util.ArrayList;
 

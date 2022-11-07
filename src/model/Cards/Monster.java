@@ -1,4 +1,4 @@
-package Cards;
+package model.Cards;
 
 public enum Monster{
     SPELL, // Dass ist was dann im Spelldeck sein darf

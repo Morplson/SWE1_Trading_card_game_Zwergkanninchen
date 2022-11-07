@@ -1,8 +1,8 @@
-package Cards.Actors;
+package model.Cards.Actors;
 
-import Cards.Element;
-import Cards.Monster;
-import Cards.Rules;
+import model.Cards.Element;
+import model.Cards.Monster;
+import model.Cards.Rules;
 
 import java.util.Random;
 

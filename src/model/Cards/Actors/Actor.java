@@ -1,7 +1,7 @@
-package Cards.Actors;
+package model.Cards.Actors;
 
-import Cards.Element;
-import Cards.Monster;
+import model.Cards.Element;
+import model.Cards.Monster;
 
 import java.util.UUID;
 

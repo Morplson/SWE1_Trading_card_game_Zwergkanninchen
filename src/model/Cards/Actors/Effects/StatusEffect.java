@@ -1,6 +1,6 @@
-package Cards.Actors.Effects;
+package model.Cards.Actors.Effects;
 
-import Cards.Actors.Actor;
+import model.Cards.Actors.Actor;
 
 public abstract class StatusEffect extends Actor {
     private Actor actor;

@@ -1,6 +1,6 @@
-package Cards;
+package model.Cards;
 
-import Cards.Actors.Card;
+import model.Cards.Actors.Card;
 
 import java.util.Random;
 
@@ -67,7 +67,7 @@ public class CardFactory {
         StringBuilder name = new StringBuilder();
 
         int damage = this.random.nextInt(2,6);
-        int health = this.random.nextInt(3,12);
+        int health = this.random.nextInt(1,12);
 
         if(damage > health && damage > 5) {
             name.append("glass cannon ");
@@ -89,13 +89,72 @@ public class CardFactory {
                 e = Element.NORMAL;
                 name.append("hurting");
         }
+
         return new Card(name.toString(), damage, health, e, Monster.SPELL);
     }
 
     public Card randomMonster() {
+        StringBuilder name = new StringBuilder();
+
+        int damage = this.random.nextInt(4,10);
+        int health = this.random.nextInt(6,26);
+
+        if (damage < 9 && health < 20) {
+            name.append("Worthy ");
+        }
+
+        Element e = null;
+        switch (this.random.nextInt(1,5)) {
+            case 1:
+                e = Element.WATER;
+                name.append("Water");
+                break;
+            case 2:
+                e = Element.FIRE;
+                name.append("Fire");
+                break;
+            default:
+                e = Element.NORMAL;
+        }
 
 
-        return null;
+        Monster m = null;
+        switch (new Random().nextInt(1,12)) {
+            case 1: case 8:
+                m = Monster.DRAGON;
+                name.append("Dragon");
+                break;
+            case 2:
+                m = Monster.WIZARD;
+                name.append("Wizard");
+                break;
+            case 3:
+                m = Monster.ORK;
+                name.append("Ork");
+                break;
+            case 4: case 10:
+                m = Monster.KNIGHT;
+                name.append("Knight");
+                break;
+            case 5:
+                m = Monster.KRAKEN;
+                name.append("Kraken");
+                break;
+            case 6:
+                m = Monster.ELVE;
+                name.append("Elve");
+                break;
+            case 7: case 9:
+                m = Monster.GOBLIN;
+                name.append("Goblin");
+                break;
+            default:
+                m = Monster.TROLL;
+                name.append("Troll");
+                break;
+        }
+
+        return new Card(name.toString(), damage, health, e, m);
     }
 
     public Card randomCard() {

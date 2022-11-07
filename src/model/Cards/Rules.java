@@ -1,7 +1,6 @@
-package Cards;
+package model.Cards;
 
-import Cards.Actors.Actor;
-import Cards.Actors.Card;
+import model.Cards.Actors.Actor;
 
 public class Rules {
 
